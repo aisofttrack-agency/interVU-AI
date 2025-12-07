@@ -1,110 +1,123 @@
-🎓 AI-Based Mock Interview Preparation System
-📘 Major Project Report
-Title: AI-Based Mock Interview Preparation System
-Domain: Artificial Intelligence / Web Development
-Technology Stack: Next.js, Firebase, Tailwind CSS, Vapi AI, Google Gemini
-📖 Abstract
-This project presents a web-based AI-powered mock interview platform aimed at helping job aspirants prepare effectively for real-world interviews. The system simulates interview environments using voice-based AI agents and evaluates candidate performance through real-time feedback and advanced scoring metrics powered by large language models.
-The platform allows users to create interviews based on role, experience level, and technology stack. During interviews, voice agents ask AI-generated questions and record responses. After session completion, structured feedback is generated analyzing communication skills, technical proficiency, confidence, cultural fit, and problem-solving ability.
-The application demonstrates the practical application of Generative AI, speech-based interfaces, cloud authentication, and modern full-stack development.
-🧩 Problem Statement
-Many job candidates face difficulty preparing for interviews due to:
-Lack of realistic interview simulations
-No access to professional feedback
-Limited opportunities for personalized evaluation
-This project addresses these challenges by:
-Providing AI-driven mock interviews
-Offering real-time interactive voice sessions
-Generating detailed and constructive performance feedback
-✅ Objectives
-To build an automated interview preparation platform using AI voice agents.
-To dynamically generate role-based and skill-based interview questions.
-To analyze candidate responses and provide scoring-based feedback.
-To create a scalable full-stack web solution using cloud services.
-⚙️ Technology Stack
-Category	Technologies Used
-Frontend	Next.js, React, Tailwind CSS
-Backend	Firebase Functions
-Authentication	Firebase Auth
-Database	Firebase Firestore
-AI / NLP	Vapi AI Voice Agents, Google Gemini
-Validation	Zod
-UI Components	shadcn/ui
-✨ Key Features
-🔐 User Authentication
-Secure login/signup using Firebase authentication.
-📝 Interview Generation
-AI-generated interview questions based on job role, experience level, and tech stack.
-🗣 Voice-Based AI Interview
-Real-time conversation with AI voice interviewers using Vapi.
-📊 Automated Feedback Analysis
-Communication Skills
-Technical Knowledge
-Problem Solving
-Cultural/Role Fit
-Confidence & Clarity
-📋 Interview Dashboard
-Maintain history of mock interviews and access detailed reports.
-📱 Responsive UI
-Optimized for desktop, tablet, and mobile devices.
-🛠 System Architecture
-User → Next.js Frontend → Firebase Authentication
-             ↓
-       Voice AI Agent (Vapi)
-             ↓
-       Google Gemini NLP
-             ↓
-     Feedback Processing Engine
-             ↓
-        Firebase Firestore
-🧪 Evaluation Metrics
-Score Range: 0 – 100
-Interview feedback is categorized with:
-Skill-wise scores
-Personalized improvement suggestions
-Key strengths analysis
-🏁 Installation & Execution
-Prerequisites
-Node.js
-npm
-Git
-Clone Project
-git clone <https://github.com/aisofttrack-agency/interVU-AI.git>
-cd <project-folder>
+# 🎓 AI-Based Mock Interview Preparation System
 
-Install Dependencies
-npm install
+## Major Project – Artificial Intelligence & Web Development
 
-Run Application
-npm run dev
-Open: http://localhost:3000
+### Abstract
+This project is a web‑based AI powered mock interview platform that conducts voice‑based interview simulations and provides automated feedback using modern AI models. The system generates interview questions dynamically based on job role, experience level and technical skill set. An AI voice agent interacts with candidates in real‑time and after the interview transcript is analyzed to produce both numerical scoring and qualitative feedback across communication, technical ability, problem‑solving, confidence, and cultural fit.
 
-📌 Project Outcomes
-Successfully implemented real-time AI voice interviewing system
-Achieved automated interview generation and feedback analysis
-Built secure scalable user management via Firebase
-Delivered modern responsive UI
-🧠 Learning Outcomes
-This project enabled:
-Practical understanding of LLM-based AI integrations
-Voice user interface design concepts
-Cloud authentication and database architecture
-Secure full-stack development with Next.js
-🔍 Limitations
-AI feedback is probabilistic and may vary by prompt interpretation.
-Real interview emotional nuances cannot be fully replicated.
-Internet connectivity required for all AI interactions.
-🚀 Future Enhancements
-Resume-based customized interview generation
-Multi-language AI interview support
-Real interviewer voice cloning
-Video interview simulation
-Recruiter collaboration modules
-🧑‍🎓 Academic Declaration
-This project is submitted as part of the Major Project requirement for the fulfillment of the undergraduate degree curriculum.
-All development work was performed for educational purposes and demonstrates the application of real-world technologies in solving interview preparation problems.
-👥 Project Team
-Student Name(s): Mohd Meraaz , Khustar Hussain, Moh Faiz Raza
-Guide / Supervisor: ____________________
-Institution: Technocrats Institute of Technology
+---
+
+## Problem Statement
+Interview preparation lacks realistic simulations and personalized feedback. This project solves that gap by enabling:
+• AI driven mock interviews  
+• Voice based interaction  
+• Automated scoring and assessment  
+
+---
+
+## Objectives
+• Build an AI mock interview system  
+• Generate dynamic role‑based questions  
+• Conduct real‑time AI interviews  
+• Evaluate interview performance  
+• Deliver a scalable cloud‑based web application  
+
+---
+
+## Technology Stack
+
+Frontend: Next.js, React, Tailwind CSS  
+Backend: Firebase Functions  
+Database: Firebase Firestore  
+Authentication: Firebase Auth  
+AI Voice: Vapi  
+LLM: Google Gemini  
+Validation: Zod  
+UI: shadcn/ui  
+
+---
+
+## Features
+
+- Secure login system  
+- AI question generation  
+- Voice‑based interviewing  
+- Transcript analysis  
+- Automated 0–100 scoring system  
+- Detailed strengths & improvement feedback  
+- Interview dashboard and result tracking  
+- Fully responsive UI  
+
+---
+
+## System Architecture
+
+User → Next.js Frontend → Firebase Authentication  
+        ↓  
+Voice Agent (Vapi AI)  
+        ↓  
+Google Gemini NLP  
+        ↓  
+Feedback Processing Engine  
+        ↓  
+Firebase Firestore Database  
+
+---
+
+## Evaluation Metrics
+
+Scores provided from 0–100 in categories:
+
+• Communication Skills  
+• Technical Knowledge  
+• Problem Solving  
+• Cultural Fit  
+• Confidence & Clarity  
+
+---
+
+## Installation
+
+### Prerequisites
+Node.js, npm, Git
+
+
+## Learning Outcomes
+
+• AI & LLM integration  
+• Voice AI implementation  
+• Cloud authentication systems  
+• Full‑stack Next.js application design  
+
+---
+
+## Limitations
+
+• AI assessments are probabilistic  
+• Real emotional intelligence is limited  
+• Internet required for voice & AI services  
+
+---
+
+## Future Scope
+
+• Resume‑based interview personalization  
+• Multilingual support  
+• Video interview simulation  
+• Recruiter dashboards  
+• Candidate progress analytics  
+
+---
+
+## Academic Declaration
+
+This project is submitted for fulfillment of undergraduate Major Project requirements for academic evaluation purposes only.
+
+---
+
+## Project Team
+
+Student Name(s): Mohd Meraaz. Khustar Hussain, Moh Faiz Raza
+Guide: ____________________  
+Institution: Technocrats Institute of Technology - Excellence
 Department: CSE-AIML
