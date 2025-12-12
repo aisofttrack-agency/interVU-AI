@@ -1,0 +1,22 @@
+{
+  "app": {
+    "[project]/Documents/interVU-AI/app/(auth)/sign-in/page": [
+      "static/media/671921b99e4f15ea-s.p.6754a747.woff2"
+    ],
+    "[project]/Documents/interVU-AI/app/(auth)/sign-up/page": [
+      "static/media/671921b99e4f15ea-s.p.6754a747.woff2"
+    ],
+    "[project]/Documents/interVU-AI/app/(root)/interview/page": [
+      "static/media/671921b99e4f15ea-s.p.6754a747.woff2"
+    ],
+    "[project]/Documents/interVU-AI/app/(root)/page": [
+      "static/media/671921b99e4f15ea-s.p.6754a747.woff2"
+    ],
+    "[project]/Documents/interVU-AI/app/_not-found/page": [
+      "static/media/671921b99e4f15ea-s.p.6754a747.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}
