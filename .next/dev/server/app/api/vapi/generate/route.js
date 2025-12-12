@@ -1,0 +1,12 @@
+var R=require("../../../../chunks/[turbopack]_runtime.js")("server/app/api/vapi/generate/route.js")
+R.c("server/chunks/89762_next_dist_2fb276d1._.js")
+R.c("server/chunks/89762_@opentelemetry_api_build_esm_f1e57476._.js")
+R.c("server/chunks/89762_zod-to-json-schema_dist_esm_c3c3e3b9._.js")
+R.c("server/chunks/89762_zod_v3_6ff28b19._.js")
+R.c("server/chunks/89762_ai_dist_index_mjs_f724eca5._.js")
+R.c("server/chunks/89762_tailwind-merge_dist_bundle-mjs_mjs_84350ec8._.js")
+R.c("server/chunks/[root-of-the-server]__4e8554b2._.js")
+R.c("server/chunks/[root-of-the-server]__dcc3ae86._.js")
+R.c("server/chunks/80b94_interVU-AI__next-internal_server_app_api_vapi_generate_route_actions_6c941978.js")
+R.m("[project]/Documents/interVU-AI/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/Documents/interVU-AI/app/api/vapi/generate/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)")
+module.exports=R.m("[project]/Documents/interVU-AI/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/Documents/interVU-AI/app/api/vapi/generate/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)").exports

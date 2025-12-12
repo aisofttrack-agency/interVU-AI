@@ -1,0 +1,87 @@
+graph TD
+    A([Start]) --> B{User Opens Web App};
+    B -->|Has Active Session?| C[Redirect to Dashboard];
+    B -->|No Session| D[Show Login/Register Screen];
+    D --> E[/User Enters Credentials or Social Login/];
+    E --> F[Send Request to Firebase Auth];
+    F --> G{Authentication Successful?};
+    G -->|No| H[Show Error Message];
+    H --> D;
+    G -->|Yes| I[Firebase Returns User Token];
+    I --> J{Is New User?};
+    J -->|Yes| K[Create User Profile in Firestore DB];
+    J -->|No| L[Fetch Existing Profile from Firestore DB];
+    K --> C;
+    L --> C;
+    C --> M([End]);
+
+
+
+
+
+    graph TD
+    A([Start from Dashboard]) --> B[/User Clicks 'New Interview'/];
+    B --> C[/User Selects: Role, Experience Level, Tech Stack/];
+    C --> D[Frontend Sends Data to Backend Function];
+    D --> E[Backend Constructs Prompt for Google Gemini LLM];
+    E -- Prompt includes Role & Skills --> F[Call Google Gemini API];
+    F --> G{Gemini Returns Questions?};
+    G -->|No/Error| H[Handle Error & Retry];
+    H --> F;
+    G -->|Yes| I[/Receive Structured Interview Questions/];
+    I --> J[Create New Interview Session Doc in Firestore];
+    J -- Status: 'Pending' --> K[Initialize Vapi Voice Agent with Context];
+    K --> L([Ready for Voice Interface]);
+
+
+
+
+    graph TD
+    A([Start Voice Session]) --> B[Connect to Vapi AI Agent];
+    B --> C[Vapi Agent Speaks Generated Question];
+    C --> D[/Candidate Speaks Answer via Microphone/];
+    D --> E[Vapi Processes Audio to Text (STT)];
+    E --> F{Is Interview Over?};
+    F -->|No| G[Vapi/LLM Generates Next Conversational Response];
+    G --> C;
+    F -->|Yes (Time limit or User ends)| H[Terminate Vapi Connection];
+    H --> I[/Vapi Generates Full Session Transcript/];
+    I --> J[Save Transcript to Firestore Session Doc];
+    J -- Status updated to 'Completed' --> K([Trigger Feedback Analysis]);
+
+
+
+
+
+    graph TD
+    A([Start Analysis Trigger]) --> B[Backend Fetches Completed Interview Transcript from Firestore];
+    B --> C[Construct Detailed Evaluation Prompt for Google Gemini];
+    C -- Include Transcript & Scoring Rubric --> D[Call Google Gemini LLM API for Analysis];
+    D --> E[/Gemini Returns Analysis JSON/];
+    E -- Scores (0-100) & Qualitative Feedback --> F[Validate JSON Structure (Zod)];
+    F --> G{Validation Okay?};
+    G -->|No| H[Log Error / Retry Analysis];
+    G -->|Yes| I[Update Firestore Session Doc with Results];
+    I --> J[Notify Frontend/User of Available Results];
+    J --> K([End]);
+
+
+
+
+
+    graph TD
+    User([User / Candidate]) -- 1. Login Credentials --> Auth[Firebase Authentication];
+    Auth -- 2. Auth Token --> NextJS[Next.js Frontend Dashboard];
+    
+    User -- 3. Voice Audio Input --> Vapi[Vapi AI Voice Agent];
+    Vapi -- 4. Audio Response (TTS) --> User;
+    
+    Vapi -- 5. Sends Transcript --> Backend[Firebase Functions Backend];
+    
+    Backend -- 6. Sends Transcript & Prompt --> Gemini[Google Gemini LLM];
+    Gemini -- 7. Returns Scores & Feedback Data --> Backend;
+    
+    Backend -- 8. Stores Interview Data & Results --> DB[(Firebase Firestore Database)];
+    
+    NextJS -- 9. Fetches Results for Display --> DB;
+    DB -- 10. Returns Data to Dashboard --> NextJS;

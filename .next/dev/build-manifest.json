@@ -3,23 +3,10 @@
     "/_app": []
   },
   "devFiles": [],
-  "polyfillFiles": [
-    "static/chunks/89762_next_dist_build_polyfills_polyfill-nomodule.js"
-  ],
+  "polyfillFiles": [],
   "lowPriorityFiles": [
     "static/development/_ssgManifest.js",
     "static/development/_buildManifest.js"
   ],
-  "rootMainFiles": [
-    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_e276f444._.js",
-    "static/chunks/89762_next_dist_compiled_react-dom_83335e95._.js",
-    "static/chunks/89762_next_dist_compiled_react-server-dom-turbopack_7609bfb0._.js",
-    "static/chunks/89762_next_dist_compiled_next-devtools_index_b0f649e7.js",
-    "static/chunks/89762_next_dist_compiled_641d3321._.js",
-    "static/chunks/89762_next_dist_client_0d7088dc._.js",
-    "static/chunks/89762_next_dist_3d8f0c30._.js",
-    "static/chunks/89762_@swc_helpers_cjs_ea897b0b._.js",
-    "static/chunks/Documents_interVU-AI_a0ff3932._.js",
-    "static/chunks/turbopack-Documents_interVU-AI_380c581d._.js"
-  ]
+  "rootMainFiles": []
 }
